@@ -8,6 +8,7 @@ body {
 }
 header {
   display: flex;
+  flex-direction: column;
   background-image: linear-gradient(blue, rgb(255, 225, 0));
 }
 nav {
@@ -43,9 +44,10 @@ main {
   list-style: none;
   padding: 1.4rem 0;
   background-color: gold;
+  display: flex;
+  flex-direction: column;
 }
 .navbar > li {
-  display: inline;
   font-size: 12px;
   padding: 0 1rem;
 }
@@ -82,4 +84,10 @@ fieldset {
 }
 p {
   margin-bottom: 1rem;
+}
+@media only screen and (min-width: 375px) {
+  header,
+  .navbar {
+    flex-direction: row;
+  }
 }
